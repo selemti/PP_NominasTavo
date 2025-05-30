@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;
 using PP_Nominas.Models.Catalogos.Shared;
-using PP_Nominas.Models.Catalogos.Empleados;
 using PP_Nominas.Models.Catalogos.Asistencia;
 
 namespace PP_Nominas.Models.Catalogos.Empleados;
 
-/// <summary>Empleado registrado en el sistema.</summary>
 public class Empleado : INotifyPropertyChanged
 {
     private string? _id;
@@ -22,7 +18,7 @@ public class Empleado : INotifyPropertyChanged
     private EstatusEmpleadoEnum _estatusEmpleado;
     private List<AsignacionPlazaEmpleado> _asignaciones = new();
     private List<UbicacionEmpleado> _historialUbicaciones = new();
-    private List<RegistroImss> _RegistrosImss = new();
+    private List<RegistroImss> _registrosImss = new();
     private List<HorarioEmpleado> _horarios = new();
     private DatosPagoEmpleado _datosPago = new();
     private List<DocumentoEmpleado> _documentos = new();
@@ -31,183 +27,67 @@ public class Empleado : INotifyPropertyChanged
     private string _usuarioRed = string.Empty;
     private string _idBiometrico = string.Empty;
     private string? _fotoPerfilUrl;
-private string _usuarioUltimaModificacion = string.Empty;
+    private string _usuarioUltimaModificacion = string.Empty;
     private DateTime _fechaUltimaModificacion;
 
+    public string? Id { get => _id; set => SetProperty(ref _id, value); }
 
-    /// <summary>ID único del empleado.</summary>
-    [Display(Name = "ID")]
-    public string? Id
-    {
-        get => _id;
-        set => SetProperty(ref _id, value);
-    }
+    [Required, Display(Name = "Número de empleado")]
+    public string NumeroEmpleado { get => _numeroEmpleado; set => SetProperty(ref _numeroEmpleado, value); }
 
-    /// <summary>Número de empleado.</summary>
-    [Required]
-    [Display(Name = "Número de empleado")]
-    public string NumeroEmpleado
-    {
-        get => _numeroEmpleado;
-        set => SetProperty(ref _numeroEmpleado, value);
-    }
+    [Required, Display(Name = "Datos personales")]
+    public Persona Persona { get => _persona; set => SetProperty(ref _persona, value); }
 
-    /// <summary>Datos personales del empleado.</summary>
-    [Required]
-    [Display(Name = "Datos personales")]
-    public Persona Persona
-    {
-        get => _persona;
-        set => SetProperty(ref _persona, value);
-    }
+    [Required, Display(Name = "NSS")]
+    public string Nss { get => _nss; set => SetProperty(ref _nss, value); }
 
-    /// <summary>Número de seguro social.</summary>
-    [Required(ErrorMessage = "El NSS es obligatorio.")]
-
-    [Display(Name = "NSS")]
-    public string Nss
-    {
-        get => _nss;
-        set => SetProperty(ref _nss, value);
-    }
-
-    /// <summary>Fecha de ingreso.</summary>
     [Display(Name = "Fecha de ingreso")]
-    public DateTime FechaIngreso
-    {
-        get => _fechaIngreso;
-        set => SetProperty(ref _fechaIngreso, value);
-    }
+    public DateTime FechaIngreso { get => _fechaIngreso; set => SetProperty(ref _fechaIngreso, value); }
 
     [Display(Name = "Tipo de Contrato")]
-    public TipoContratoEnum TipoContrato
-    {
-        get => _tipoContrato;
-        set => SetProperty(ref _tipoContrato, value);
-    }
+    public TipoContratoEnum TipoContrato { get => _tipoContrato; set => SetProperty(ref _tipoContrato, value); }
 
     [Display(Name = "Tipo de Horario")]
-    public TipoHorarioEnum TipoHorario
-    {
-        get => _tipoHorario;
-        set => SetProperty(ref _tipoHorario, value);
-    }
+    public TipoHorarioEnum TipoHorario { get => _tipoHorario; set => SetProperty(ref _tipoHorario, value); }
 
     [Display(Name = "Estatus del Empleado")]
-    public EstatusEmpleadoEnum EstatusEmpleado
-    {
-        get => _estatusEmpleado;
-        set => SetProperty(ref _estatusEmpleado, value);
-    }
+    public EstatusEmpleadoEnum EstatusEmpleado { get => _estatusEmpleado; set => SetProperty(ref _estatusEmpleado, value); }
 
-    /// <summary>Asignaciones del empleado.</summary>
     [Display(Name = "Asignaciones")]
-    public List<AsignacionPlazaEmpleado> Asignaciones
-    {
-        get => _asignaciones;
-        set => SetProperty(ref _asignaciones, value);
-    }
+    public List<AsignacionPlazaEmpleado> Asignaciones { get => _asignaciones; set => SetProperty(ref _asignaciones, value); }
 
-    /// <summary>Ubicaciones anteriores del empleado.</summary>
-    [Display(Name = "Ubicaciones del empleado")]
-    public List<UbicacionEmpleado> HistorialUbicaciones
-    {
-        get => _historialUbicaciones;
-        set => SetProperty(ref _historialUbicaciones, value);
-    }
+    [Display(Name = "Ubicaciones")]
+    public List<UbicacionEmpleado> HistorialUbicaciones { get => _historialUbicaciones; set => SetProperty(ref _historialUbicaciones, value); }
 
-    /// <summary>Registros en el IMSS.</summary>
     [Display(Name = "Registros IMSS")]
-    public List<RegistroImss> RegistrosImss
-    {
-        get => _RegistrosImss;
-        set => SetProperty(ref _RegistrosImss, value);
-    }
+    public List<RegistroImss> RegistrosImss { get => _registrosImss; set => SetProperty(ref _registrosImss, value); }
 
-    /// <summary>Horarios laborales asignados.</summary>
-    [Display(Name = "Horarios asignados")]
-    public List<HorarioEmpleado> Horarios
-    {
-        get => _horarios;
-        set => SetProperty(ref _horarios, value);
-    }
+    [Display(Name = "Horarios")]
+    public List<HorarioEmpleado> Horarios { get => _horarios; set => SetProperty(ref _horarios, value); }
 
-    /// <summary>Datos bancarios y forma de pago.</summary>
     [Display(Name = "Datos de pago")]
-    public DatosPagoEmpleado DatosPago
-    {
-        get => _datosPago;
-        set => SetProperty(ref _datosPago, value);
-    }
+    public DatosPagoEmpleado DatosPago { get => _datosPago; set => SetProperty(ref _datosPago, value); }
 
-    /// <summary>Documentos entregados.</summary>
     [Display(Name = "Documentos")]
-    public List<DocumentoEmpleado> Documentos
-    {
-        get => _documentos;
-        set => SetProperty(ref _documentos, value);
-    }
+    public List<DocumentoEmpleado> Documentos { get => _documentos; set => SetProperty(ref _documentos, value); }
 
-    /// <summary>Contactos de emergencia.</summary>
     [Display(Name = "Contactos de emergencia")]
-    public List<ContactoEmergencia> ContactosEmergencia
-    {
-        get => _contactosEmergencia;
-        set => SetProperty(ref _contactosEmergencia, value);
-    }
+    public List<ContactoEmergencia> ContactosEmergencia { get => _contactosEmergencia; set => SetProperty(ref _contactosEmergencia, value); }
 
-    /// <summary>Correo corporativo.</summary>
-    [Display(Name = "Correo corporativo")]
-    public string CorreoCorporativo
-    {
-        get => _correoCorporativo;
-        set => SetProperty(ref _correoCorporativo, value);
-    }
+    public string CorreoCorporativo { get => _correoCorporativo; set => SetProperty(ref _correoCorporativo, value); }
 
-    /// <summary>Usuario de red.</summary>
-    [Display(Name = "Usuario de red")]
-    public string UsuarioRed
-    {
-        get => _usuarioRed;
-        set => SetProperty(ref _usuarioRed, value);
-    }
+    public string UsuarioRed { get => _usuarioRed; set => SetProperty(ref _usuarioRed, value); }
 
-    /// <summary>ID biométrico.</summary>
-    [Display(Name = "ID biométrico")]
-    public string IdBiometrico
-    {
-        get => _idBiometrico;
-        set => SetProperty(ref _idBiometrico, value);
-    }
+    public string IdBiometrico { get => _idBiometrico; set => SetProperty(ref _idBiometrico, value); }
 
-    /// <summary>Foto de perfil.</summary>
-    [Display(Name = "Foto de perfil")]
-    public string? FotoPerfilUrl
-    {
-        get => _fotoPerfilUrl;
-        set => SetProperty(ref _fotoPerfilUrl, value);
-    }
+    public string? FotoPerfilUrl { get => _fotoPerfilUrl; set => SetProperty(ref _fotoPerfilUrl, value); }
 
-    /// <summary>Fecha de última modificación.</summary>
-    [Display(Name = "Última modificación")]
-    public DateTime FechaUltimaModificacion
-    {
-        get => _fechaUltimaModificacion;
-        set => SetProperty(ref _fechaUltimaModificacion, value);
-    }
+    public DateTime FechaUltimaModificacion { get => _fechaUltimaModificacion; set => SetProperty(ref _fechaUltimaModificacion, value); }
 
-    /// <summary>Modificado por.</summary>
-    [Display(Name = "Modificado por")]
-    public string UsuarioUltimaModificacion
-    {
-        get => _usuarioUltimaModificacion;
-        set => SetProperty(ref _usuarioUltimaModificacion, value);
-    }
+    public string UsuarioUltimaModificacion { get => _usuarioUltimaModificacion; set => SetProperty(ref _usuarioUltimaModificacion, value); }
 
     public event PropertyChangedEventHandler? PropertyChanged;
-    protected void OnPropertyChanged([CallerMemberName] string? name = null)
-        => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-
+    protected void OnPropertyChanged([CallerMemberName] string? name = null) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
     protected bool SetProperty<T>(ref T field, T value, [CallerMemberName] string? name = null)
     {
         if (EqualityComparer<T>.Default.Equals(field, value)) return false;

@@ -18,6 +18,7 @@ using PP_Nominas.Models.Catalogos.Shared;
 using PP_Nominas.Models.Divisiones_CentrosDeCosto_Empresas;
 using PP_Nominas.Services.Catalogos.Empleados;
 using PP_Nominas.Services.Divisiones_CentrosDeCosto_Empresas;
+using PP_Nominas.Converters.Catalogos.Empleados;
 
 namespace PP_Nominas.ViewModel.Catalogos.Empleados;
 
@@ -355,8 +356,7 @@ public class NuevoEmpleadoViewModel : INotifyPropertyChanged
         try
         {
             // Convertimos el Empleado a EmpleadoCreacionDto
-            var dto = EmpleadoConverter.GenerarDtoDesdeModel(Empleado);
-
+            var dto = EmpleadoConverter.ToDto(Empleado); 
             var response = await httpClient.PostAsJsonAsync("api/Empleado", dto);
 
             if (response.IsSuccessStatusCode)
