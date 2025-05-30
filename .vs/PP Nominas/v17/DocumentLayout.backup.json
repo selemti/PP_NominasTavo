@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Tavo\\source\\repos\\lcbenitez\\PP-Nominas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{96409EF5-ECBA-15D6-4211-42CB6B94EE90}|PP_NominasBack\\PP_NominasBack.csproj|c:\\users\\tavo\\source\\repos\\lcbenitez\\pp-nominas\\pp_nominasback\\controllers\\catalogos\\empleados\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96409EF5-ECBA-15D6-4211-42CB6B94EE90}|PP_NominasBack\\PP_NominasBack.csproj|solutionrelative:pp_nominasback\\controllers\\catalogos\\empleados\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96409EF5-ECBA-15D6-4211-42CB6B94EE90}|PP_NominasBack\\PP_NominasBack.csproj|c:\\users\\tavo\\source\\repos\\lcbenitez\\pp-nominas\\pp_nominasback\\profiles\\catalogosprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96409EF5-ECBA-15D6-4211-42CB6B94EE90}|PP_NominasBack\\PP_NominasBack.csproj|solutionrelative:pp_nominasback\\profiles\\catalogosprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96409EF5-ECBA-15D6-4211-42CB6B94EE90}|PP_NominasBack\\PP_NominasBack.csproj|c:\\users\\tavo\\source\\repos\\lcbenitez\\pp-nominas\\pp_nominasback\\models\\catalogos\\empleados\\datospagoempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96409EF5-ECBA-15D6-4211-42CB6B94EE90}|PP_NominasBack\\PP_NominasBack.csproj|solutionrelative:pp_nominasback\\models\\catalogos\\empleados\\datospagoempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96409EF5-ECBA-15D6-4211-42CB6B94EE90}|PP_NominasBack\\PP_NominasBack.csproj|c:\\users\\tavo\\source\\repos\\lcbenitez\\pp-nominas\\pp_nominasback\\dtos\\catalogos\\empleados\\datospagoempleadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96409EF5-ECBA-15D6-4211-42CB6B94EE90}|PP_NominasBack\\PP_NominasBack.csproj|solutionrelative:pp_nominasback\\dtos\\catalogos\\empleados\\datospagoempleadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96409EF5-ECBA-15D6-4211-42CB6B94EE90}|PP_NominasBack\\PP_NominasBack.csproj|c:\\users\\tavo\\source\\repos\\lcbenitez\\pp-nominas\\pp_nominasback\\dtos\\catalogos\\empleados\\empleadocreaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96409EF5-ECBA-15D6-4211-42CB6B94EE90}|PP_NominasBack\\PP_NominasBack.csproj|solutionrelative:pp_nominasback\\dtos\\catalogos\\empleados\\empleadocreaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96409EF5-ECBA-15D6-4211-42CB6B94EE90}|PP_NominasBack\\PP_NominasBack.csproj|c:\\users\\tavo\\source\\repos\\lcbenitez\\pp-nominas\\pp_nominasback\\models\\catalogos\\empleados\\asignacionplazaempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96409EF5-ECBA-15D6-4211-42CB6B94EE90}|PP_NominasBack\\PP_NominasBack.csproj|solutionrelative:pp_nominasback\\models\\catalogos\\empleados\\asignacionplazaempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96409EF5-ECBA-15D6-4211-42CB6B94EE90}|PP_NominasBack\\PP_NominasBack.csproj|c:\\users\\tavo\\source\\repos\\lcbenitez\\pp-nominas\\pp_nominasback\\dtos\\catalogos\\empleados\\asignacionplazaempleadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96409EF5-ECBA-15D6-4211-42CB6B94EE90}|PP_NominasBack\\PP_NominasBack.csproj|solutionrelative:pp_nominasback\\dtos\\catalogos\\empleados\\asignacionplazaempleadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96409EF5-ECBA-15D6-4211-42CB6B94EE90}|PP_NominasBack\\PP_NominasBack.csproj|c:\\users\\tavo\\source\\repos\\lcbenitez\\pp-nominas\\pp_nominasback\\dtos\\catalogos\\asistencia\\horarioempleadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96409EF5-ECBA-15D6-4211-42CB6B94EE90}|PP_NominasBack\\PP_NominasBack.csproj|solutionrelative:pp_nominasback\\dtos\\catalogos\\asistencia\\horarioempleadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CatalogosProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Tavo\\source\\repos\\lcbenitez\\PP-Nominas\\PP_NominasBack\\Profiles\\CatalogosProfile.cs",
+              "RelativeDocumentMoniker": "PP_NominasBack\\Profiles\\CatalogosProfile.cs",
+              "ToolTip": "C:\\Users\\Tavo\\source\\repos\\lcbenitez\\PP-Nominas\\PP_NominasBack\\Profiles\\CatalogosProfile.cs",
+              "RelativeToolTip": "PP_NominasBack\\Profiles\\CatalogosProfile.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAiwKAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T22:41:32.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmpleadoCreacionDto.cs",
+              "DocumentMoniker": "C:\\Users\\Tavo\\source\\repos\\lcbenitez\\PP-Nominas\\PP_NominasBack\\Dtos\\Catalogos\\Empleados\\EmpleadoCreacionDto.cs",
+              "RelativeDocumentMoniker": "PP_NominasBack\\Dtos\\Catalogos\\Empleados\\EmpleadoCreacionDto.cs",
+              "ToolTip": "C:\\Users\\Tavo\\source\\repos\\lcbenitez\\PP-Nominas\\PP_NominasBack\\Dtos\\Catalogos\\Empleados\\EmpleadoCreacionDto.cs",
+              "RelativeToolTip": "PP_NominasBack\\Dtos\\Catalogos\\Empleados\\EmpleadoCreacionDto.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAA7wBYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T22:25:21.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DatosPagoEmpleado.cs",
+              "DocumentMoniker": "C:\\Users\\Tavo\\source\\repos\\lcbenitez\\PP-Nominas\\PP_NominasBack\\Models\\Catalogos\\Empleados\\DatosPagoEmpleado.cs",
+              "RelativeDocumentMoniker": "PP_NominasBack\\Models\\Catalogos\\Empleados\\DatosPagoEmpleado.cs",
+              "ToolTip": "C:\\Users\\Tavo\\source\\repos\\lcbenitez\\PP-Nominas\\PP_NominasBack\\Models\\Catalogos\\Empleados\\DatosPagoEmpleado.cs",
+              "RelativeToolTip": "PP_NominasBack\\Models\\Catalogos\\Empleados\\DatosPagoEmpleado.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T22:22:46.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DatosPagoEmpleadoDto.cs",
+              "DocumentMoniker": "C:\\Users\\Tavo\\source\\repos\\lcbenitez\\PP-Nominas\\PP_NominasBack\\Dtos\\Catalogos\\Empleados\\DatosPagoEmpleadoDto.cs",
+              "RelativeDocumentMoniker": "PP_NominasBack\\Dtos\\Catalogos\\Empleados\\DatosPagoEmpleadoDto.cs",
+              "ToolTip": "C:\\Users\\Tavo\\source\\repos\\lcbenitez\\PP-Nominas\\PP_NominasBack\\Dtos\\Catalogos\\Empleados\\DatosPagoEmpleadoDto.cs",
+              "RelativeToolTip": "PP_NominasBack\\Dtos\\Catalogos\\Empleados\\DatosPagoEmpleadoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T22:21:28.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AsignacionPlazaEmpleado.cs",
+              "DocumentMoniker": "C:\\Users\\Tavo\\source\\repos\\lcbenitez\\PP-Nominas\\PP_NominasBack\\Models\\Catalogos\\Empleados\\AsignacionPlazaEmpleado.cs",
+              "RelativeDocumentMoniker": "PP_NominasBack\\Models\\Catalogos\\Empleados\\AsignacionPlazaEmpleado.cs",
+              "ToolTip": "C:\\Users\\Tavo\\source\\repos\\lcbenitez\\PP-Nominas\\PP_NominasBack\\Models\\Catalogos\\Empleados\\AsignacionPlazaEmpleado.cs",
+              "RelativeToolTip": "PP_NominasBack\\Models\\Catalogos\\Empleados\\AsignacionPlazaEmpleado.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T22:22:32.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AsignacionPlazaEmpleadoDto.cs",
+              "DocumentMoniker": "C:\\Users\\Tavo\\source\\repos\\lcbenitez\\PP-Nominas\\PP_NominasBack\\Dtos\\Catalogos\\Empleados\\AsignacionPlazaEmpleadoDto.cs",
+              "RelativeDocumentMoniker": "PP_NominasBack\\Dtos\\Catalogos\\Empleados\\AsignacionPlazaEmpleadoDto.cs",
+              "ToolTip": "C:\\Users\\Tavo\\source\\repos\\lcbenitez\\PP-Nominas\\PP_NominasBack\\Dtos\\Catalogos\\Empleados\\AsignacionPlazaEmpleadoDto.cs",
+              "RelativeToolTip": "PP_NominasBack\\Dtos\\Catalogos\\Empleados\\AsignacionPlazaEmpleadoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T22:21:42.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HorarioEmpleadoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Tavo\\source\\repos\\lcbenitez\\PP-Nominas\\PP_NominasBack\\Dtos\\Catalogos\\Asistencia\\HorarioEmpleadoDTO.cs",
+              "RelativeDocumentMoniker": "PP_NominasBack\\Dtos\\Catalogos\\Asistencia\\HorarioEmpleadoDTO.cs",
+              "ToolTip": "C:\\Users\\Tavo\\source\\repos\\lcbenitez\\PP-Nominas\\PP_NominasBack\\Dtos\\Catalogos\\Asistencia\\HorarioEmpleadoDTO.cs",
+              "RelativeToolTip": "PP_NominasBack\\Dtos\\Catalogos\\Asistencia\\HorarioEmpleadoDTO.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwB0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T21:36:33.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmpleadoController.cs",
+              "DocumentMoniker": "C:\\Users\\Tavo\\source\\repos\\lcbenitez\\PP-Nominas\\PP_NominasBack\\Controllers\\Catalogos\\Empleados\\EmpleadoController.cs",
+              "RelativeDocumentMoniker": "PP_NominasBack\\Controllers\\Catalogos\\Empleados\\EmpleadoController.cs",
+              "ToolTip": "C:\\Users\\Tavo\\source\\repos\\lcbenitez\\PP-Nominas\\PP_NominasBack\\Controllers\\Catalogos\\Empleados\\EmpleadoController.cs",
+              "RelativeToolTip": "PP_NominasBack\\Controllers\\Catalogos\\Empleados\\EmpleadoController.cs",
+              "ViewState": "AgIAAIgBAAAAAAAAAAAAwKgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T17:44:28.561Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

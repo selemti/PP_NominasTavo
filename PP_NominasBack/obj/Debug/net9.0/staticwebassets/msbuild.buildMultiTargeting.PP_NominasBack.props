@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PP_NominasBack.props" />
+</Project>

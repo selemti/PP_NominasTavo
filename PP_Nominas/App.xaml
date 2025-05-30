@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:PP_Nominas.Converters"
+             x:Class="PP_Nominas.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Importar primero los colores -->
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <!-- Luego los estilos generales -->
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Estilos específicos de la aplicación -->
+            <Style x:Key="IconButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="TextColor" Value="{StaticResource Primary}"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="Padding" Value="10,5"/>
+                <Setter Property="CornerRadius" Value="5"/>
+            </Style>
+            <!-- Estilos Errores de la aplicación -->
+            <Style x:Key="ErrorLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="Margin" Value="0,2,0,0" />
+            </Style>
+            <converters:EnumDisplayConverter x:Key="EnumDisplayConverter" />
+            <converters:StringNotEmptyConverter x:Key="StringNotEmptyConverter" />
+            <converters:EnumToKeyValueConverter x:Key="EnumToKeyValueConverter" />
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PP_Nominas.Converters"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="PP_Nominas.Views.Catalogos.Empleados.EmpleadoPage"
+             Title="Empleados">
+
+    <!-- Recursos: convertidores para mostrar u ocultar mensajes -->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:IsZeroConverter x:Key="IsZeroConverter" />
+            <local:IsGreaterThanZeroConverter x:Key="IsGreaterThanZeroConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <!-- Botón superior de barra de navegación -->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Nuevo" Clicked="OnNuevoClicked" />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+            <!-- Título -->
+            <Label Text="Listado de Colaboradores"
+                   FontSize="22"
+                   FontAttributes="Bold" />
+
+            <!-- Buscador -->
+            <SearchBar Placeholder="Buscar por nombre, CURP, RFC o clave..."
+                       Text="{Binding FiltroTexto}"
+                       SearchCommand="{Binding BuscarCommand}" />
+
+            <!-- Filtros (División, Centro, Empresa, Estatus) -->
+            <FlexLayout Direction="Row"
+                        Wrap="Wrap"
+                        JustifyContent="Start"
+                        AlignItems="Start"
+                        Margin="0,10"
+                        Padding="5">
+
+                <Picker Title="División"
+                        ItemsSource="{Binding Divisiones}"
+                        ItemDisplayBinding="{Binding Nombre}"
+                        SelectedItem="{Binding DivisionSeleccionada}"
+                        FlexLayout.Basis="250"
+                        FlexLayout.Grow="1"
+                        Margin="5" />
+
+                <Picker Title="Centro de Costo"
+                        ItemsSource="{Binding CentrosCosto}"
+                        ItemDisplayBinding="{Binding Nombre}"
+                        SelectedItem="{Binding CentroSeleccionado}"
+                        FlexLayout.Basis="250"
+                        FlexLayout.Grow="1"
+                        Margin="5" />
+
+                <Picker Title="Empresa"
+                        ItemsSource="{Binding Empresas}"
+                        ItemDisplayBinding="{Binding Nombre}"
+                        SelectedItem="{Binding EmpresaSeleccionada}"
+                        FlexLayout.Basis="250"
+                        FlexLayout.Grow="1"
+                        Margin="5" />
+
+                <Picker Title="Estatus"
+                        ItemsSource="{Binding EstatusEmpleados}"
+                        SelectedItem="{Binding EstatusSeleccionado}"
+                        FlexLayout.Basis="250"
+                        FlexLayout.Grow="1"
+                        Margin="5" />
+            </FlexLayout>
+
+            <!-- Mensaje si no hay empleados -->
+            <Label Text="No se encontraron colaboradores."
+                   FontSize="16"
+                   HorizontalOptions="Center"
+                   TextColor="Gray"
+                   IsVisible="{Binding Empleados.Count, Converter={StaticResource IsZeroConverter}}" />
+
+            <!-- Encabezado fijo -->
+            <Grid ColumnDefinitions="100,*,*,*,*,100,100,100"
+                  Padding="5"
+                  BackgroundColor="#eeeeee">
+                <Label Text="CVE" Grid.Column="0" FontAttributes="Bold"/>
+                <Label Text="Nombre" Grid.Column="1" FontAttributes="Bold"/>
+                <Label Text="Empresa" Grid.Column="2" FontAttributes="Bold"/>
+                <Label Text="Centro" Grid.Column="3" FontAttributes="Bold"/>
+                <Label Text="Área" Grid.Column="4" FontAttributes="Bold"/>
+                <Label Text="Ingreso" Grid.Column="5" FontAttributes="Bold"/>
+                <Label Text="Estatus" Grid.Column="6" FontAttributes="Bold"/>
+                <Label Text="Acción" Grid.Column="7" FontAttributes="Bold"/>
+            </Grid>
+
+            <!-- Lista de empleados -->
+            <CollectionView ItemsSource="{Binding Empleados}" SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="100,*,*,*,*,100,100,100"
+                              Padding="5"
+                              BackgroundColor="White"
+                              Margin="0,2">
+                            <Label Text="{Binding NumeroEmpleado}" Grid.Column="0"/>
+                            <Label Text="{Binding Persona.NombreCompleto}" Grid.Column="1"/>
+                            <Label Text="{Binding Asignaciones[0].CentroDeCosto.Empresas[0].Nombre}" Grid.Column="2"/>
+                            <Label Text="{Binding Asignaciones[0].CentroDeCosto.Nombre}" Grid.Column="3"/>
+                            <Label Text="{Binding Asignaciones[0].CentroDeCosto.Areas[0].Nombre}" Grid.Column="4"/>
+                            <Label Text="{Binding FechaIngreso, StringFormat='dd/MM/yyyy'}" Grid.Column="5"/>
+                            <Label Text="{Binding EstatusEmpleado}" Grid.Column="6"/>
+                            <Button Text="Ver"
+                                    Grid.Column="7"
+                                    BackgroundColor="DodgerBlue"
+                                    TextColor="White"
+                                    CommandParameter="{Binding Id}"
+                                    Clicked="OnVerDetallesClicked"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

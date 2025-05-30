@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:PP_Nominas.ViewModel.Catalogos.Empleados"
+             x:Class="PP_Nominas.Views.Catalogos.Empleados.DetalleEmpleadoView"
+             x:DataType="viewmodel:NuevoEmpleadoViewModel"
+             Title="Detalle del Empleado">
+
+    <!-- Binding al ViewModel -->
+    <ContentPage.BindingContext>
+        <viewmodel:DetalleEmpleadoViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Título -->
+            <Label Text="Detalle del Empleado"
+                   FontAttributes="Bold"
+                   FontSize="24"
+                   HorizontalOptions="Center" />
+
+            <!-- Datos personales -->
+            <Grid ColumnDefinitions="150,*,150,*"
+                  RowDefinitions="Auto"
+                  ColumnSpacing="10"
+                  RowSpacing="10">
+
+                <Label Grid.Column="1" Text="Nombre:" />
+                <Label Grid.Column="3" Text="{Binding Empleado.Persona.Nombre}" />
+
+                <Label Grid.Row="1" Grid.Column="1" Text="Apellidos:" />
+                <Label Grid.Row="1" Grid.Column="3"
+                       Text="{Binding Empleado.Persona.ApellidoPaterno}" />
+
+                <Label Grid.Row="2" Grid.Column="1" Text="CURP:" />
+                <Label Grid.Row="2" Grid.Column="3"
+                       Text="{Binding Empleado.Persona.Curp}" />
+
+                <Label Grid.Row="3" Grid.Column="1" Text="RFC:" />
+                <Label Grid.Row="3" Grid.Column="3"
+                       Text="{Binding Empleado.Persona.Rfc}" />
+
+                <Label Grid.Row="4" Grid.Column="1" Text="NSS:" />
+                <Label Grid.Row="4" Grid.Column="3"
+                       Text="{Binding Empleado.Nss}" />
+
+                <Label Grid.Row="5" Grid.Column="1" Text="Correo:" />
+                <Label Grid.Row="5" Grid.Column="3"
+                       Text="{Binding Empleado.CorreoCorporativo}" />
+
+                <Label Grid.Row="6" Grid.Column="1" Text="Estado actual:" />
+                <Label Grid.Row="6" Grid.Column="3"
+                       Text="{Binding Empleado.EstatusEmpleado}" />
+
+                <Label Grid.Row="7" Grid.Column="1" Text="Fecha de ingreso:" />
+                <Label Grid.Row="7" Grid.Column="3"
+                       Text="{Binding Empleado.FechaIngreso, StringFormat='{0:dd/MM/yyyy}'}" />
+
+                <!-- Plaza activa -->
+                <Label Grid.Row="8" Grid.Column="1" Text="Plaza activa:" />
+                <Label Grid.Row="8" Grid.Column="3"
+                       Text="{Binding PlazaActiva.PlazaId}" />
+
+                <Label Grid.Row="9" Grid.Column="1" Text="¿Vigente?:" />
+                <Label Grid.Row="9" Grid.Column="3"
+                       Text="{Binding Vigente}" />
+            </Grid>
+
+            <!-- Sección de botones -->
+            <Button Text="Recargar"
+                    Command="{Binding CargarEmpleadoAsync}"
+                    BackgroundColor="DodgerBlue"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    WidthRequest="150" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,1091 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PP_Nominas</name>
+    </assembly>
+    <members>
+        <member name="T:PP_Nominas.Converters.EnumDisplayConverter">
+            <summary>
+            Convierte un valor Enum a su nombre amigable usando [Display(Name="...")].
+            </summary>
+        </member>
+        <member name="M:PP_Nominas.Converters.EnumDisplayConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PP_Nominas.Converters.EnumDisplayConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:PP_Nominas.Converters.EnumToKeyValueConverter">
+            <summary>
+            Convierte un Enum en una lista de KeyValuePair con su DisplayName para usarse en listas.
+            ⚠ No usar este converter en Pickers con SelectedItem de tipo Enum (usar EnumHelper en el ViewModel).
+            </summary>
+        </member>
+        <member name="M:PP_Nominas.Converters.EnumToKeyValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PP_Nominas.Converters.EnumToKeyValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Asistencia.CalendarioLaboral">
+            <summary>Representa la clase CalendarioLaboral.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Asistencia.Checada">
+            <summary>Representa la clase Checada.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Asistencia.ChecadaAgregada">
+            <summary>
+            Representa la clase ChecadaAgregada.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Asistencia.ChecadaRemota">
+            <summary>Registro de checada realizada remotamente por el empleado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Asistencia.CompensacionOvertime">
+            <summary>
+            Representa la clase CompensacionOvertime.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.CompensacionOvertime.Id">
+            <summary>
+            Obtiene o establece Id.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.CompensacionOvertime.Codigo">
+            <summary>
+            Obtiene o establece Codigo.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.CompensacionOvertime.Nombre">
+            <summary>
+            Obtiene o establece Nombre.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.CompensacionOvertime.Descripcion">
+            <summary>
+            Obtiene o establece Descripcion.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.CompensacionOvertime.FechaUltimaModificacion">
+            <summary>
+            Fecha de la última modificación del documento.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.CompensacionOvertime.UsuarioUltimaModificacion">
+            <summary>
+            Identificador del usuario que realizó la última modificación.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Asistencia.HoraCategoria">
+            <summary>
+            Representa la clase HoraCategoria.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Asistencia.HorarioEmpleado">
+            <summary>Horario asignado a un empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.HorarioEmpleado.HorarioPlantillaId">
+            <summary>ID de la plantilla de horario.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.HorarioEmpleado.FechaInicio">
+            <summary>Fecha de inicio del horario.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.HorarioEmpleado.FechaFin">
+            <summary>Fecha de fin del horario (opcional).</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.HorarioEmpleado.FechaUltimaModificacion">
+            <summary>Fecha de la última modificación.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.HorarioEmpleado.UsuarioUltimaModificacion">
+            <summary>Usuario que realizó la última modificación.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Asistencia.HorarioExcepcion">
+            <summary>
+            Representa la clase HorarioExcepcion.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.HorarioExcepcion.Id">
+            <summary>
+            Obtiene o establece Id.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.HorarioExcepcion.EmpleadoId">
+            <summary>
+            Obtiene o establece EmpleadoId.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.HorarioExcepcion.FechaInicio">
+            <summary>
+            Obtiene o establece FechaInicio.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.HorarioExcepcion.FechaFin">
+            <summary>
+            Obtiene o establece FechaFin.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.HorarioExcepcion.TurnoEspecialId">
+            <summary>
+            Obtiene o establece TurnoEspecialId.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.HorarioExcepcion.FechaUltimaModificacion">
+            <summary>
+            Fecha de la última modificación del documento.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.HorarioExcepcion.UsuarioUltimaModificacion">
+            <summary>
+            Identificador del usuario que realizó la última modificación.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Asistencia.HorarioPlantilla">
+            <summary>
+            Representa la clase HorarioPlantilla.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.HorarioPlantilla.Id">
+            <summary>
+            Obtiene o establece Id.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.HorarioPlantilla.NombrePlantilla">
+            <summary>
+            Obtiene o establece NombrePlantilla.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.HorarioPlantilla.DescripcionPlantilla">
+            <summary>
+            Obtiene o establece DescripcionPlantilla.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.HorarioPlantilla.TurnoId">
+            <summary>
+            Obtiene o establece TurnoId.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.HorarioPlantilla.FechaUltimaModificacion">
+            <summary>
+            Fecha de la última modificación del documento.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Asistencia.HorarioPlantilla.UsuarioUltimaModificacion">
+            <summary>
+            Identificador del usuario que realizó la última modificación.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Asistencia.RangoTolerancia">
+            <summary>
+            Representa la clase RangoTolerancia.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Asistencia.Turno">
+            <summary>Representa un turno laboral asignable.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Biometria.DispositivoBiometrico">
+            <summary>Dispositivo biométrico asignado a un centro de trabajo.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Biometria.LogsSincronizacion">
+            <summary>
+            Representa la clase LogsSincronizacion.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Compensaciones.CatalogoCompensaciones">
+            <summary>
+            Representa la clase CatalogoCompensaciones.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Compensaciones.EmpleadoCompensacion">
+            <summary>
+            Representa la clase EmpleadoCompensacion.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Compensaciones.FondoAhorro">
+            <summary>
+            Representa la clase FondoAhorro.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Compensaciones.MovimientoFondoAhorro">
+            <summary>
+            Representa la clase MovimientoFondoAhorro.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Compensaciones.TabuladorSalarial">
+            <summary>
+            Representa la clase TabuladorSalarial.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Configuracion.ConfiguracionGlobal">
+            <summary>
+            Representa la clase ConfiguracionGlobal.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Configuracion.Modulo">
+            <summary>
+            Representa la clase Modulo.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Configuracion.ParametroSistema">
+            <summary>
+            Representa la clase ParametroSistema.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Configuracion.Politica">
+            <summary>
+            Representa la clase Politica.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Empleados.AsignacionPlazaEmpleado">
+            <summary>Asignación de una plaza laboral al empleado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Empleados.ContactoEmergencia">
+            <summary>Persona a contactar en caso de emergencia.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.ContactoEmergencia.Nombre">
+            <summary>Nombre completo del contacto.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.ContactoEmergencia.Parentesco">
+            <summary>Parentesco con el empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.ContactoEmergencia.Telefono">
+            <summary>Teléfono de contacto.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.ContactoEmergencia.Principal">
+            <summary>Indica si es contacto principal.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.ContactoEmergencia.Correo">
+            <summary>Correo electrónico (opcional).</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.ContactoEmergencia.FechaUltimaModificacion">
+            <summary>Fecha de la última modificación.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.ContactoEmergencia.UsuarioUltimaModificacion">
+            <summary>Usuario que realizó la última modificación.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Empleados.ContratoEmpleado">
+            <summary>Representa la clase ContratoEmpleado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Empleados.DatosPagoEmpleado">
+            <summary>Información bancaria y fiscal del empleado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Empleados.DocumentoEmpleado">
+            <summary>Documento entregado por el empleado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Empleados.Empleado">
+            <summary>Empleado registrado en el sistema.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.Empleado.Id">
+            <summary>ID único del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.Empleado.NumeroEmpleado">
+            <summary>Número de empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.Empleado.Persona">
+            <summary>Datos personales del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.Empleado.Nss">
+            <summary>Número de seguro social.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.Empleado.FechaIngreso">
+            <summary>Fecha de ingreso.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.Empleado.Asignaciones">
+            <summary>Asignaciones del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.Empleado.HistorialUbicaciones">
+            <summary>Ubicaciones anteriores del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.Empleado.RegistrosImss">
+            <summary>Registros en el IMSS.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.Empleado.Horarios">
+            <summary>Horarios laborales asignados.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.Empleado.DatosPago">
+            <summary>Datos bancarios y forma de pago.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.Empleado.Documentos">
+            <summary>Documentos entregados.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.Empleado.ContactosEmergencia">
+            <summary>Contactos de emergencia.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.Empleado.CorreoCorporativo">
+            <summary>Correo corporativo.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.Empleado.UsuarioRed">
+            <summary>Usuario de red.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.Empleado.IdBiometrico">
+            <summary>ID biométrico.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.Empleado.FotoPerfilUrl">
+            <summary>Foto de perfil.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.Empleado.FechaUltimaModificacion">
+            <summary>Fecha de última modificación.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Empleados.Empleado.UsuarioUltimaModificacion">
+            <summary>Modificado por.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Empleados.HistorialPlazaEmpleado">
+            <summary>
+            Representa la clase HistorialPlazaEmpleado.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Empleados.HistorialRegistroImss">
+            <summary>Movimiento histórico del empleado ante el IMSS.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Empleados.HistorialUbicacionEmpleado">
+            <summary>Historial de ubicaciones donde ha laborado el empleado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Empleados.RegistroImss">
+            <summary>Registro actual del IMSS para el empleado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Empleados.TipoArchivoEmpleado">
+            <summary>Representa el tipo de documento solicitado al empleado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Empleados.TipoContrato">
+            <summary>Modelo frontend que representa la clase TipoContrato.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Empleados.UbicacionEmpleado">
+            <summary>Ubicación física donde ha laborado el empleado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Incidencias.HistorialIncidencia">
+            <summary>
+            Representa la clase HistorialIncidencia.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Incidencias.IncapacidadMedica">
+            <summary>
+            Representa la clase IncapacidadMedica.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Incidencias.Justificante">
+            <summary>
+            Representa la clase Justificante.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Incidencias.Justificante.Id">
+            <summary>
+            ID del justificante de incidencia
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Incidencias.Justificante.TipoJustificante">
+            <summary>
+            Tipo de documento (certificado médico, etc.)
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Incidencias.Justificante.UrlDocumento">
+            <summary>
+            URL del archivo digital
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Incidencias.Justificante.FechaEmision">
+            <summary>
+            Fecha de emisión del justificante
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Incidencias.Justificante.FechaUltimaModificacion">
+            <summary>
+            Fecha de última modificación
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Incidencias.Justificante.UsuarioUltimaModificacion">
+            <summary>
+            Usuario que realizó la última modificación
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Nomina.CatalogoPrestaciones">
+            <summary>Prestación definida por la empresa para sus empleados.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Nomina.CfdiNomina">
+            <summary>
+            Representa la clase CfdiNomina.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Nomina.ConceptoFiniquito">
+            <summary>
+            Representa la clase ConceptoFiniquito.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Nomina.FiniquitoLiquidacion">
+            <summary>Representa un finiquito o liquidación otorgado a un empleado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Nomina.PeriodoNomina">
+            <summary>Representa un periodo de nómina registrado en el sistema.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Nomina.ReciboNomina">
+            <summary>Representa el recibo de nómina de un empleado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Nomina.ResponsableNomina">
+            <summary>Usuario responsable del proceso de nómina.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Organizacion.Ubicacion">
+            <summary>Representa una ubicación geográfica con validación de asistencia por radio o polígono.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Prenomina.TipoPeriodo">
+            <summary>Tipo de periodo definido para el calendario de nómina (quincenal, semanal, etc.).</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Seguridad.Perfil">
+            <summary>Perfil de permisos asignado a usuarios.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Seguridad.Usuario">
+            <summary>Usuario registrado en el sistema.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.AlertaNotificacion">
+            <summary>Representa una alerta generada en el sistema para notificar a uno o más destinatarios.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.Auditable">
+            <summary>
+            Representa la clase Auditable.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Shared.Auditable.FechaCreacion">
+            <summary>
+            Obtiene o establece FechaCreacion.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Shared.Auditable.UsuarioCreadorId">
+            <summary>
+            Obtiene o establece FechaModificacion.
+            </summary>
+            <summary>
+            Obtiene o establece UsuarioCreadorId.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Shared.Auditable.UsuarioModificadorId">
+            <summary>
+            Obtiene o establece UsuarioModificadorId.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Shared.Auditable.FechaUltimaModificacion">
+            <summary>
+            Fecha de la última modificación del documento.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Shared.Auditable.UsuarioUltimaModificacion">
+            <summary>
+            Identificador del usuario que realizó la última modificación.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.CatalogoEntidades">
+            <summary>Catálogo base de entidades polimórficas o asociadas a flujos dinámicos.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.EstatusEmpleadoEnum">
+            <summary>Estado actual del empleado dentro de la organización.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.MotivoBajaEnum">
+            <summary>Motivo por el cual un empleado causa baja.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoContratoEnum">
+            <summary>Tipo de contrato laboral del empleado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.FormaPagoEnum">
+            <summary>Forma en que se paga al empleado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoSalarioEnum">
+            <summary>Tipo de salario que recibe el colaborador.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.EstadoCivilEnum">
+            <summary>Estado civil declarado del colaborador.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.NivelEstudioEnum">
+            <summary>Máximo nivel de estudios alcanzado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.SexoEnum">
+            <summary>Sexo biológico o autodeclarado del empleado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoSangreEnum">
+            <summary>Tipo de sangre registrado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.Nacionalidad">
+            <summary>Nacionalidad del empleado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoTelefono">
+            <summary>Tipo de número telefónico declarado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoEventoEnum">
+            <summary>Tipo de evento de checada (entrada, salida, etc.).</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoHorarioEnum">
+            <summary>Tipo de horario asignado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoDiaEnum">
+            <summary>Clasificación de días en el calendario laboral.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoDispositivoEnum">
+            <summary>Tipo de dispositivo desde donde se registran asistencias.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.EstatusPlazaEnum">
+            <summary>Estado de una plaza o puesto de trabajo.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoCentroTrabajoEnum">
+            <summary>Tipo de centro de trabajo asignado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoJustificanteEnum">
+            <summary>Tipo de justificante entregado por el empleado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoIncapacidadEnum">
+            <summary>Tipo de incapacidad médica.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoPermisoEnum">
+            <summary>Tipo de permiso solicitado por el colaborador.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.ModalidadReposicionEnum">
+            <summary>Forma en que se repondrá el tiempo no trabajado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoNominaEnum">
+            <summary>Tipo de nómina a procesar.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.PeriodicidadEnum">
+            <summary>Frecuencia de pago del colaborador.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.PeriodoEnum">
+            <summary>Mes calendario dentro del ejercicio fiscal.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoFiscalizacionEnum">
+            <summary>Tipo de fiscalización de CFDI.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoCompensacionEnum">
+            <summary>Categoría de compensaciones otorgadas al colaborador.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoDeduccionEnum">
+            <summary>Tipo de deducción aplicada al colaborador.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoDescuentoEnum">
+            <summary>Modalidad con la que se aplica un descuento.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.EstatusUsuarioEnum">
+            <summary>Estatus del usuario en el sistema.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoResponsabilidadEnum">
+            <summary>Tipo de responsabilidad asignada.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoDestinatarioEnum">
+            <summary>Categoría del destinatario de la notificación.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoResponsableEnum">
+            <summary>Origen del responsable de ejecutar una acción.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.MedioEnvioEnum">
+            <summary>Medio utilizado para enviar notificaciones.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.TipoAsignacionEnum">
+            <summary>Tipo de asignación automática o manual.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.Contacto">
+            <summary>Persona de contacto relacionada a una entidad (p. ej. emergencia o referencia).</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.DestinatarioAlerta">
+            <summary>Representa a un destinatario asociado a una alerta específica.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.Direccion">
+            <summary>Dirección postal del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Shared.Direccion.Id">
+            <summary>Identificador único de la dirección.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.FlujoValidacion">
+            <summary>Representa un flujo de validación que consta de múltiples pasos.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.HistorialDocumento">
+            <summary>Representa un registro histórico de cambios en una entidad.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.PasoFlujoValidacion">
+            <summary>Representa un paso dentro de un flujo de validación.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.Persona">
+            <summary>Modelo completo de persona física con validaciones y estructura MAUI.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Shared.Telefono">
+            <summary>Teléfono asociado a una persona o contacto.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Shared.Telefono.Id">
+            <summary>Identificador único del teléfono.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Shared.Telefono.Tipo">
+            <summary>Tipo de teléfono (Ej: Celular, Casa, Oficina, Emergencia).</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Shared.Telefono.Numero">
+            <summary>Número telefónico sin lada.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Shared.Telefono.ClaveLada">
+            <summary>Clave lada nacional o internacional (Ej: 55, 33, +52).</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Shared.Telefono.Extension">
+            <summary>Extensión interna (si aplica).</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Shared.Telefono.Principal">
+            <summary>Indica si este es el número principal de contacto.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Shared.Telefono.Observaciones">
+            <summary>Comentario adicional o nota sobre el teléfono.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Shared.Telefono.FechaUltimaModificacion">
+            <summary>Fecha de la última modificación del documento.</summary>
+        </member>
+        <member name="P:PP_Nominas.Models.Catalogos.Shared.Telefono.UsuarioUltimaModificacion">
+            <summary>Usuario que realizó la última modificación.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Vacaciones.PeriodoVacacional">
+            <summary>Representa el periodo anual de vacaciones asignado a un empleado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Vacaciones.Permiso">
+            <summary>Representa una solicitud de permiso.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Catalogos.Vacaciones.Vacacion">
+            <summary>Solicitud de vacaciones realizada por un empleado.</summary>
+        </member>
+        <member name="T:PP_Nominas.Models.Core.NotifyPropertyChangedBase">
+            <summary>
+            Clase base que implementa INotifyPropertyChanged para facilitar la notificación de cambios en propiedades.
+            </summary>
+        </member>
+        <member name="M:PP_Nominas.Models.Core.NotifyPropertyChangedBase.OnPropertyChanged(System.String)">
+            <summary>
+            Llama al evento PropertyChanged con el nombre de la propiedad que cambió.
+            </summary>
+            <param name="propertyName">Nombre de la propiedad (se obtiene automáticamente si se omite).</param>
+        </member>
+        <member name="M:PP_Nominas.Models.Core.NotifyPropertyChangedBase.SetProperty``1(``0@,``0,System.String)">
+            <summary>
+            Método auxiliar para establecer el valor de una propiedad y notificar el cambio sólo si es diferente.
+            </summary>
+            <typeparam name="T">Tipo de dato de la propiedad.</typeparam>
+            <param name="field">Referencia al campo privado.</param>
+            <param name="value">Nuevo valor a asignar.</param>
+            <param name="propertyName">Nombre de la propiedad.</param>
+            <returns>True si el valor cambió, false si es igual.</returns>
+        </member>
+        <member name="T:PP_Nominas.Services.Catalogos.Empleados.TipoContratoService">
+            <summary>Servicio para consumir el API de TipoContrato.</summary>
+        </member>
+        <member name="M:PP_Nominas.Services.Catalogos.Empleados.TipoContratoService.ObtenerTodosAsync">
+            <summary>Obtiene todos los tipos de contrato activos.</summary>
+        </member>
+        <member name="M:PP_Nominas.Services.Catalogos.Empleados.TipoContratoService.InsertarAsync(PP_Nominas.Models.Catalogos.Empleados.TipoContrato)">
+            <summary>Inserta un nuevo tipo de contrato.</summary>
+        </member>
+        <member name="M:PP_Nominas.Services.Divisiones_CentrosDeCosto_Empresas.OrganigramaService.ObtenerPlazasDisponiblesAsync(System.String)">
+            <summary>
+            Obtiene las plazas disponibles del organigrama (nodos sin asignación y con nombre definido).
+            </summary>
+        </member>
+        <member name="M:PP_Nominas.Services.Divisiones_CentrosDeCosto_Empresas.OrganigramaService.GetNodosPorOrganigramaId(System.String)">
+            <summary>
+            Método base reutilizable para obtener todos los nodos del organigrama.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.ViewModel.Catalogos.Empleados.DetalleEmpleadoViewModel">
+            <summary>ViewModel para la vista de detalle del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.DetalleEmpleadoViewModel.EmpleadoId">
+            <summary>ID del empleado recibido por navegación.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.DetalleEmpleadoViewModel.Empleado">
+            <summary>Instancia completa del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.DetalleEmpleadoViewModel.PlazaActiva">
+            <summary>Asignación activa actual del empleado (si existe).</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.DetalleEmpleadoViewModel.Vigente">
+            <summary>Indica si la plaza está vigente (sin fecha de liberación).</summary>
+        </member>
+        <member name="M:PP_Nominas.ViewModel.Catalogos.Empleados.DetalleEmpleadoViewModel.CargarEmpleadoAsync">
+            <summary>Carga la información del empleado desde la API.</summary>
+        </member>
+        <member name="T:PP_Nominas.ViewModel.Catalogos.Empleados.EmpleadoPageViewModel">
+            <summary>ViewModel para la pantalla principal de empleados.</summary>
+        </member>
+        <member name="T:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel">
+            <summary>
+            ViewModel para la vista de creación de nuevo empleado.
+            Maneja la lógica de negocio, validación y comunicación con el backend.
+            </summary>
+        </member>
+        <member name="F:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.httpClient">
+            <summary>Cliente HTTP para comunicación con el backend.</summary>
+        </member>
+        <member name="F:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel._tipoContratoService">
+            <summary>Servicio para obtener los tipos de contrato.</summary>
+        </member>
+        <member name="F:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel._divisionService">
+            <summary>Servicio para obtener los Divisiones, Empresas y Centros de Costos.</summary>
+        </member>
+        <member name="F:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel._organigramaService">
+            <summary>Servicio para obtener Orgranigrama.</summary>
+        </member>
+        <member name="M:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.#ctor">
+            <summary>
+            Inicializa una nueva instancia del ViewModel con valores predeterminados.
+            Configura el cliente HTTP, inicializa el modelo y carga los catálogos necesarios.
+            </summary>
+        </member>
+        <member name="M:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.CargarOpcionesDeEnumeraciones">
+            <summary>
+            Carga las opciones de enumeraciones para los controles de selección en la UI.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.Empleado">
+            <summary>Modelo principal del empleado que se está creando.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.GuardarCommand">
+            <summary>Comando para ejecutar el guardado del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.SexoOpciones">
+            <summary>Opciones de sexo disponibles para selección.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.EstadoCivilOpciones">
+            <summary>Opciones de estado civil disponibles para selección.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.NivelEstudioOpciones">
+            <summary>Opciones de nivel de estudio disponibles para selección.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.TipoSangreOpciones">
+            <summary>Opciones de tipo de sangre disponibles para selección.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.CentroSeleccionado">
+            <summary>Centro de costo seleccionado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.PlazasDisponibles">
+            <summary>
+            Lista de plazas disponibles obtenidas desde el organigrama del centro de costo.
+            </summary>
+        </member>
+        <member name="M:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ValidarFormulario">
+            <summary>
+            Valida el formulario completo.
+            </summary>
+            <returns>True si el formulario es válido, False en caso contrario.</returns>
+        </member>
+        <member name="M:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.LimpiarErrores">
+            <summary>
+            Limpia todos los mensajes de error de validación.
+            </summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorNombre">
+            <summary>Mensaje de error para el campo Nombre.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorApellidoPaterno">
+            <summary>Mensaje de error para el campo Apellido Paterno.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorApellidoMaterno">
+            <summary>Mensaje de error para el campo Apellido Materno.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorCurp">
+            <summary>Mensaje de error para el campo CURP.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorRfc">
+            <summary>Mensaje de error para el campo RFC.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorNacionalidad">
+            <summary>Mensaje de error para el campo Nacionalidad.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorCalle">
+            <summary>Mensaje de error para el campo Calle.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorCodigoPostal">
+            <summary>Mensaje de error para el campo Código Postal.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorColonia">
+            <summary>Mensaje de error para el campo Colonia.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorLocalidad">
+            <summary>Mensaje de error para el campo Localidad.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorMunicipio">
+            <summary>Mensaje de error para el campo Municipio.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorEntidadFederativa">
+            <summary>Mensaje de error para el campo Entidad Federativa.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorTelefonoCelular">
+            <summary>Mensaje de error para el campo Teléfono Celular.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorTelefonoCasa">
+            <summary>Mensaje de error para el campo Teléfono de Casa.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorSexo">
+            <summary>Mensaje de error para el campo Sexo.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorEstadoCivil">
+            <summary>Mensaje de error para el campo Estado Civil.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorNivelEstudios">
+            <summary>Mensaje de error para el campo Nivel de Estudios.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorTipoSangre">
+            <summary>Mensaje de error para el campo Tipo de Sangre.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ErrorCorreoPersonal">
+            <summary>Mensaje de error para el campo Correo Personal.</summary>
+        </member>
+        <member name="M:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.GuardarAsync">
+            <summary>
+            Guarda el empleado en el backend después de validar todos los campos.
+            Muestra alertas al usuario sobre el resultado de la operación.
+            </summary>
+            <returns>True si el guardado fue exitoso, False en caso contrario.</returns>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.Nombre">
+            <summary>Nombre del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ApellidoPaterno">
+            <summary>Apellido paterno del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ApellidoMaterno">
+            <summary>Apellido materno del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.Curp">
+            <summary>CURP del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.Rfc">
+            <summary>RFC del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.Nacionalidad">
+            <summary>Nacionalidad del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.FechaNacimiento">
+            <summary>Fecha de nacimiento del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.FechaMinimaNacimiento">
+            <summary>Fecha mínima permitida para la fecha de nacimiento (100 años atrás).</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.FechaMaximaNacimiento">
+            <summary>Fecha máxima permitida para la fecha de nacimiento (hoy).</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.Sexo">
+            <summary>Sexo del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.EstadoCivil">
+            <summary>Estado civil del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.NivelEstudios">
+            <summary>Nivel de estudios del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.TipoSangre">
+            <summary>Tipo de sangre del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.Calle">
+            <summary>Calle de la dirección del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.NumeroExterior">
+            <summary>Número exterior de la dirección del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.NumeroInterior">
+            <summary>Número interior de la dirección del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.CodigoPostal">
+            <summary>Código postal de la dirección del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.Colonia">
+            <summary>Colonia de la dirección del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.Localidad">
+            <summary>Localidad de la dirección del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.Municipio">
+            <summary>Municipio de la dirección del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.EntidadFederativa">
+            <summary>Entidad federativa de la dirección del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.TelefonoMovilNumero">
+            <summary>Número de teléfono celular del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.TelefonoCasaNumero">
+            <summary>Número de teléfono de casa del empleado.</summary>
+        </member>
+        <member name="M:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.ObtenerTelefonoPorTipo(PP_Nominas.Models.Catalogos.Shared.TipoTelefono)">
+            <summary>
+            Obtiene un teléfono específico por su tipo.
+            </summary>
+            <param name="tipo">Tipo de teléfono a buscar.</param>
+            <returns>El teléfono encontrado o null si no existe.</returns>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.CorreoPersonal">
+            <summary>Correo electrónico personal del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.Asignacion">
+            <summary>Acceso directo a la asignación principal del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.JornadaLaboral">
+            <summary>Jornada laboral del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.TurnoAsignado">
+            <summary>Turno asignado al empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.EsRotativo">
+            <summary>¿El empleado tiene turno rotativo?</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.PeriodicidadPago">
+            <summary>Periodicidad de pago del empleado.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.PeriodicidadPagoOpciones">
+            <summary>Lista de opciones de periodicidad de pago.</summary>
+        </member>
+        <member name="P:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.Comentarios">
+            <summary>Comentarios adicionales sobre el empleado.</summary>
+        </member>
+        <member name="M:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.OnPropertyChanged(System.String)">
+            <summary>
+            Notifica a la vista que una propiedad ha cambiado para actualizar los bindings.
+            </summary>
+            <param name="name">Nombre de la propiedad que cambió (automático por CallerMemberName).</param>
+        </member>
+        <member name="M:PP_Nominas.ViewModel.Catalogos.Empleados.NuevoEmpleadoViewModel.CargarPlazasDesdeOrganigramaAsync">
+            <summary>
+            Carga las plazas (puestos) disponibles desde el organigrama asociado al centro de costo seleccionado.
+            </summary>
+        </member>
+        <member name="M:PP_Nominas.ViewModel.UtileriasGenerales.MostrarAlertaAsync(System.String,System.String,System.String)">
+            <summary>
+            Muestra una alerta emergente en pantalla de forma asíncrona.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Views.Catalogos.Empleados.EmpleadoPage">
+            <summary>Página para mostrar el listado de empleados y aplicar filtros.</summary>
+        </member>
+        <member name="M:PP_Nominas.Views.Catalogos.Empleados.EmpleadoPage.#ctor">
+            <summary>Inicializa la vista y su contexto de datos.</summary>
+        </member>
+        <member name="M:PP_Nominas.Views.Catalogos.Empleados.EmpleadoPage.OnNuevoClicked(System.Object,System.EventArgs)">
+            <summary>
+            Maneja el evento del botón de toolbar "Nuevo".
+            Navega hacia la vista de alta de un nuevo empleado.
+            </summary>
+        </member>
+        <member name="M:PP_Nominas.Views.Catalogos.Empleados.EmpleadoPage.OnVerDetallesClicked(System.Object,System.EventArgs)">
+            <summary>
+            Maneja el clic en botón "Ver" para navegar al detalle del empleado seleccionado.
+            </summary>
+        </member>
+        <member name="T:PP_Nominas.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_DatePicker.TextColorTo(Microsoft.Maui.Controls.DatePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Editor.TextColorTo(Microsoft.Maui.Controls.Editor,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Entry.TextColorTo(Microsoft.Maui.Controls.Entry,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_InputView.TextColorTo(Microsoft.Maui.Controls.InputView,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Label.TextColorTo(Microsoft.Maui.Controls.Label,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Picker.TextColorTo(Microsoft.Maui.Controls.Picker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_RadioButton.TextColorTo(Microsoft.Maui.Controls.RadioButton,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_SearchBar.TextColorTo(Microsoft.Maui.Controls.SearchBar,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_TimePicker.TextColorTo(Microsoft.Maui.Controls.TimePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+    </members>
+</doc>

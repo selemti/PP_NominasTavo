@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!-- Colores Principales -->
+    <Color x:Key="Primary">#2E86AB</Color>
+    <Color x:Key="PrimaryLight">#E8F4F8</Color>
+    <Color x:Key="PrimaryDark">#1D5B7A</Color>
+    <Color x:Key="Tertiary">#2B0B98</Color>
+
+    <!-- Colores Secundarios -->
+    <Color x:Key="Secondary">#F18F01</Color>
+    <Color x:Key="SecondaryLight">#F9C781</Color>
+    <Color x:Key="SecondaryDark">#B36B00</Color>
+    <Color x:Key="MidnightBlue">#191970</Color>
+
+    <!-- Colores Neutrales -->
+    <Color x:Key="White">#FFFFFF</Color>
+    <Color x:Key="Black">#000000</Color>
+    <Color x:Key="OffBlack">#1F1F1F</Color>
+
+    <!-- Escala de Grises -->
+    <Color x:Key="Gray100">#E1E1E1</Color>
+    <Color x:Key="Gray200">#C8C8C8</Color>
+    <Color x:Key="Gray300">#ACACAC</Color>
+    <Color x:Key="Gray400">#919191</Color>
+    <Color x:Key="Gray500">#6E6E6E</Color>
+    <Color x:Key="Gray600">#404040</Color>
+    <Color x:Key="Gray900">#212121</Color>
+    <Color x:Key="Gray950">#141414</Color>
+
+    <!-- Texto -->
+    <Color x:Key="PrimaryText">#1A1A1A</Color>
+    <Color x:Key="SecondaryText">#666666</Color>
+    <Color x:Key="LightText">#FFFFFF</Color>
+    <Color x:Key="PrimaryDarkText">#000000</Color>
+    <Color x:Key="SecondaryDarkText">#9880e5</Color>
+
+    <!-- Estados -->
+    <Color x:Key="Success">#4CAF50</Color>
+    <Color x:Key="Warning">#FFC107</Color>
+    <Color x:Key="Danger">#F44336</Color>
+
+    <!-- Colores adicionales -->
+    <Color x:Key="Magenta">#FF00FF</Color>
+    <Color x:Key="IconButton">#2E86AB</Color>
+    <Color x:Key="PrimaryButton">#2E86AB</Color>
+    <Color x:Key="SecondaryButton">#F18F01</Color>
+    <Color x:Key="BodyText">#1A1A1A</Color>
+    <Color x:Key="SubHeadline">#666666</Color>
+    <Color x:Key="Headline">#000000</Color>
+
+    <!-- Pinceles -->
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}" />
+    <SolidColorBrush x:Key="PrimaryLightBrush" Color="{StaticResource PrimaryLight}" />
+    <SolidColorBrush x:Key="PrimaryDarkBrush" Color="{StaticResource PrimaryDark}" />
+    <SolidColorBrush x:Key="TertiaryBrush" Color="{StaticResource Tertiary}" />
+
+    <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource Secondary}" />
+    <SolidColorBrush x:Key="SecondaryLightBrush" Color="{StaticResource SecondaryLight}" />
+    <SolidColorBrush x:Key="SecondaryDarkBrush" Color="{StaticResource SecondaryDark}" />
+
+    <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource White}" />
+    <SolidColorBrush x:Key="BlackBrush" Color="{StaticResource Black}" />
+
+    <SolidColorBrush x:Key="Gray100Brush" Color="{StaticResource Gray100}" />
+    <SolidColorBrush x:Key="Gray200Brush" Color="{StaticResource Gray200}" />
+    <SolidColorBrush x:Key="Gray300Brush" Color="{StaticResource Gray300}" />
+    <SolidColorBrush x:Key="Gray400Brush" Color="{StaticResource Gray400}" />
+    <SolidColorBrush x:Key="Gray500Brush" Color="{StaticResource Gray500}" />
+    <SolidColorBrush x:Key="Gray600Brush" Color="{StaticResource Gray600}" />
+    <SolidColorBrush x:Key="Gray900Brush" Color="{StaticResource Gray900}" />
+    <SolidColorBrush x:Key="Gray950Brush" Color="{StaticResource Gray950}" />
+
+    <SolidColorBrush x:Key="PrimaryTextBrush" Color="{StaticResource PrimaryText}" />
+    <SolidColorBrush x:Key="SecondaryTextBrush" Color="{StaticResource SecondaryText}" />
+    <SolidColorBrush x:Key="LightTextBrush" Color="{StaticResource LightText}" />
+    <SolidColorBrush x:Key="SecondaryDarkTextBrush" Color="{StaticResource SecondaryDarkText}" />
+    <SolidColorBrush x:Key="PrimaryDarkTextBrush" Color="{StaticResource PrimaryDarkText}" />
+
+    <SolidColorBrush x:Key="SuccessBrush" Color="{StaticResource Success}" />
+    <SolidColorBrush x:Key="WarningBrush" Color="{StaticResource Warning}" />
+    <SolidColorBrush x:Key="DangerBrush" Color="{StaticResource Danger}" />
+
+    <SolidColorBrush x:Key="MagentaBrush" Color="{StaticResource Magenta}" />
+    <SolidColorBrush x:Key="IconButtonBrush" Color="{StaticResource IconButton}" />
+    <SolidColorBrush x:Key="PrimaryButtonBrush" Color="{StaticResource PrimaryButton}" />
+    <SolidColorBrush x:Key="SecondaryButtonBrush" Color="{StaticResource SecondaryButton}" />
+    <SolidColorBrush x:Key="BodyTextBrush" Color="{StaticResource BodyText}" />
+    <SolidColorBrush x:Key="SubHeadlineBrush" Color="{StaticResource SubHeadline}" />
+    <SolidColorBrush x:Key="HeadlineBrush" Color="{StaticResource Headline}" />
+
+</ResourceDictionary>

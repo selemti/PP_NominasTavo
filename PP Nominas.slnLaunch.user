@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "aMBOS",
+    "Projects": [
+      {
+        "Path": "PP_NominasBack\\PP_NominasBack.csproj",
+        "Action": "Start",
+        "DebugTarget": "IIS Express"
+      },
+      {
+        "Path": "PP_Nominas\\PP_Nominas.csproj",
+        "Action": "Start",
+        "DebugTarget": "Windows Machine"
+      }
+    ]
+  }
+]

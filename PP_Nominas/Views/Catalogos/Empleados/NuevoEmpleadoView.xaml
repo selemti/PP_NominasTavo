@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:PP_Nominas.ViewModel.Catalogos.Empleados"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
+             xmlns:converters="clr-namespace:PP_Nominas.Converters"
+             x:Class="PP_Nominas.Views.Catalogos.Empleados.NuevoEmpleadoView"
+             Title="Nuevo Empleado">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:EnumToKeyValueConverter x:Key="EnumToKeyValueConverter"/>
+            <converters:StringNotEmptyConverter x:Key="StringNotEmptyConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.BindingContext>
+        <viewmodel:NuevoEmpleadoViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid RowDefinitions="*,Auto">
+          <!-- SfTabView con todas las pestañas -->
+        <syncfusion:SfTabView Grid.Row="0">
+            <syncfusion:SfTabItem Header="👤Generales">
+                <ScrollView>
+                    <VerticalStackLayout Padding="20" Spacing="20">
+                        <Label Text="Datos Generales"
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       HorizontalOptions="Center" />
+
+                        <!-- Foto, nombre, apellidos, CURP, RFC -->
+                        <Grid ColumnDefinitions="200,*" RowDefinitions="Auto,Auto,Auto" ColumnSpacing="20">
+                            <!-- Fotografía -->
+                            <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"
+                            Stroke="Gray"
+                            WidthRequest="160"
+                            HeightRequest="200"
+                            VerticalOptions="Start"
+                            BackgroundColor="White">
+                                <Label Text="📷 Fotografía"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center" />
+                            </Border>
+
+                            <!-- Nombre -->
+                            <VerticalStackLayout Grid.Row="0" Grid.Column="1" Spacing="2">
+                                <Label Text="Nombre(s):" />
+                                <Entry Text="{Binding Nombre}" />
+                                <Label Text="{Binding ErrorNombre}" 
+                               Style="{StaticResource ErrorLabelStyle}"
+                               IsVisible="{Binding ErrorNombre, Converter={StaticResource StringNotEmptyConverter}}" />
+                            </VerticalStackLayout>
+
+                            <!-- Apellidos -->
+                            <Grid Grid.Row="1" Grid.Column="1" ColumnDefinitions="*,*" ColumnSpacing="10">
+                                <VerticalStackLayout Grid.Column="0">
+                                    <Label Text="Apellido Paterno:" />
+                                    <Entry Text="{Binding ApellidoPaterno}" />
+                                    <Label Text="{Binding ErrorApellidoPaterno}" 
+                                   Style="{StaticResource ErrorLabelStyle}" 
+                                   IsVisible="{Binding ErrorApellidoPaterno, Converter={StaticResource StringNotEmptyConverter}}" />
+                                </VerticalStackLayout>
+                                <VerticalStackLayout Grid.Column="1">
+                                    <Label Text="Apellido Materno:" />
+                                    <Entry Text="{Binding ApellidoMaterno}" />
+                                    <Label Text="{Binding ErrorApellidoMaterno}" 
+                                   Style="{StaticResource ErrorLabelStyle}" 
+                                   IsVisible="{Binding ErrorApellidoMaterno, Converter={StaticResource StringNotEmptyConverter}}" />
+                                </VerticalStackLayout>
+                            </Grid>
+
+                            <!-- CURP y RFC -->
+                            <Grid Grid.Row="2" Grid.Column="1" ColumnDefinitions="*,*" ColumnSpacing="10">
+                                <VerticalStackLayout Grid.Column="0">
+                                    <Label Text="CURP:" />
+                                    <Entry Text="{Binding Curp}" />
+                                    <Label Text="{Binding ErrorCurp}" 
+                                   Style="{StaticResource ErrorLabelStyle}" 
+                                   IsVisible="{Binding ErrorCurp, Converter={StaticResource StringNotEmptyConverter}}" />
+                                </VerticalStackLayout>
+                                <VerticalStackLayout Grid.Column="1">
+                                    <Label Text="RFC:" />
+                                    <Entry Text="{Binding Rfc}" />
+                                    <Label Text="{Binding ErrorRfc}" 
+                                   Style="{StaticResource ErrorLabelStyle}" 
+                                   IsVisible="{Binding ErrorRfc, Converter={StaticResource StringNotEmptyConverter}}" />
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Grid>
+
+                        <!-- NSS, Género, Estado Civil -->
+                        <Grid ColumnDefinitions="*,*,*" ColumnSpacing="20">
+                            <VerticalStackLayout Grid.Column="0">
+                                <Label Text="NSS:" />
+                                <Entry Text="{Binding Empleado.Nss}" />
+                            </VerticalStackLayout>
+                            <VerticalStackLayout Grid.Column="1">
+                                <Label Text="Género:" />
+                                <Picker ItemsSource="{Binding SexoOpciones}"
+            SelectedItem="{Binding Sexo, Mode=TwoWay}"
+            ItemDisplayBinding="{Binding ., Converter={StaticResource EnumDisplayConverter}}" />
+
+                            </VerticalStackLayout>
+                            <VerticalStackLayout Grid.Column="2">
+                                <Label Text="Estado Civil:" />
+                                <Picker ItemsSource="{Binding EstadoCivilOpciones}"
+            SelectedItem="{Binding EstadoCivil, Mode=TwoWay}"
+            ItemDisplayBinding="{Binding ., Converter={StaticResource EnumDisplayConverter}}" />
+
+                            </VerticalStackLayout>
+                        </Grid>
+
+                        <!-- Teléfonos y correo -->
+                        <Grid ColumnDefinitions="*,*,*" ColumnSpacing="20">
+                            <VerticalStackLayout Grid.Column="0">
+                                <Label Text="Número Celular:" />
+                                <Entry Text="{Binding TelefonoMovilNumero}" />
+                                <Label Text="{Binding ErrorTelefonoCelular}"
+                               Style="{StaticResource ErrorLabelStyle}"
+                               IsVisible="{Binding ErrorTelefonoCelular, Converter={StaticResource StringNotEmptyConverter}}" />
+                            </VerticalStackLayout>
+                            <VerticalStackLayout Grid.Column="1">
+                                <Label Text="Teléfono Casa:" />
+                                <Entry Text="{Binding TelefonoCasaNumero}" />
+                                <Label Text="{Binding ErrorTelefonoCasa}"
+                               Style="{StaticResource ErrorLabelStyle}"
+                               IsVisible="{Binding ErrorTelefonoCasa, Converter={StaticResource StringNotEmptyConverter}}" />
+                            </VerticalStackLayout>
+                            <VerticalStackLayout Grid.Column="2">
+                                <Label Text="Correo electrónico personal:" />
+                                <Entry Text="{Binding CorreoPersonal}" />
+                                <Label Text="{Binding ErrorCorreoPersonal}" 
+                                   Style="{StaticResource ErrorLabelStyle}" 
+                                   IsVisible="{Binding ErrorCorreoPersonal, Converter={StaticResource StringNotEmptyConverter}}" />
+                            </VerticalStackLayout>
+
+                        </Grid>
+
+                        <!-- Fecha nacimiento, Nacionalidad, Nivel de estudios -->
+                        <Grid ColumnDefinitions="*,*,*" ColumnSpacing="20">
+                            <VerticalStackLayout Grid.Column="0">
+                                <Label Text="Fecha de nacimiento:" />
+                                <DatePicker Date="{Binding FechaNacimiento}"
+                                    Format="dd/MM/yyyy"
+                                    MinimumDate="{Binding FechaMinimaNacimiento}"
+                                    MaximumDate="{Binding FechaMaximaNacimiento}" />
+                                <Label Text="Tipo de Sangre:" />
+                                <Picker ItemsSource="{Binding TipoSangreOpciones}"
+            SelectedItem="{Binding TipoSangre, Mode=TwoWay}"
+            ItemDisplayBinding="{Binding ., Converter={StaticResource EnumDisplayConverter}}" />
+
+                            </VerticalStackLayout>
+                            <VerticalStackLayout Grid.Column="1">
+                                <Label Text="Nacionalidad:" />
+                                <Entry Text="{Binding Nacionalidad}" />
+                                <Label Text="{Binding ErrorNacionalidad}" 
+                               Style="{StaticResource ErrorLabelStyle}" 
+                               IsVisible="{Binding ErrorNacionalidad, Converter={StaticResource StringNotEmptyConverter}}" />
+                            </VerticalStackLayout>
+                            <VerticalStackLayout Grid.Column="2">
+                                <Label Text="Nivel de estudios:" />
+                                <Picker ItemsSource="{Binding NivelEstudioOpciones}"
+            SelectedItem="{Binding NivelEstudios, Mode=TwoWay}"
+            ItemDisplayBinding="{Binding ., Converter={StaticResource EnumDisplayConverter}}" />
+
+                            </VerticalStackLayout>
+                        </Grid>
+
+                        <!-- Dirección -->
+                        <Border Stroke="LightGray" Padding="15" BackgroundColor="White">
+                            <VerticalStackLayout Spacing="15">
+                                <Label Text="Dirección" FontAttributes="Bold" />
+                                <!-- Calle + Exterior + Interior -->
+                                <Grid ColumnDefinitions="2*,*,*" ColumnSpacing="10">
+                                    <VerticalStackLayout Grid.Column="0">
+                                        <Label Text="Calle:" />
+                                        <Entry Text="{Binding Calle}" />
+                                        <Label Text="{Binding ErrorCalle}" Style="{StaticResource ErrorLabelStyle}" IsVisible="{Binding ErrorCalle, Converter={StaticResource StringNotEmptyConverter}}" />
+                                    </VerticalStackLayout>
+                                    <VerticalStackLayout Grid.Column="1">
+                                        <Label Text="Num. Exterior:" />
+                                        <Entry Text="{Binding NumeroExterior}" />
+                                    </VerticalStackLayout>
+                                    <VerticalStackLayout Grid.Column="2">
+                                        <Label Text="Num. Interior:" />
+                                        <Entry Text="{Binding NumeroInterior}" />
+                                    </VerticalStackLayout>
+                                </Grid>
+
+                                <!-- CP, Colonia, Localidad -->
+                                <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10">
+                                    <VerticalStackLayout Grid.Column="0">
+                                        <Label Text="Código Postal:" />
+                                        <Entry Text="{Binding CodigoPostal}" />
+                                        <Label Text="{Binding ErrorCodigoPostal}" Style="{StaticResource ErrorLabelStyle}" IsVisible="{Binding ErrorCodigoPostal, Converter={StaticResource StringNotEmptyConverter}}" />
+                                    </VerticalStackLayout>
+                                    <VerticalStackLayout Grid.Column="1">
+                                        <Label Text="Colonia:" />
+                                        <Entry Text="{Binding Colonia}" />
+                                        <Label Text="{Binding ErrorColonia}" Style="{StaticResource ErrorLabelStyle}" IsVisible="{Binding ErrorColonia, Converter={StaticResource StringNotEmptyConverter}}" />
+                                    </VerticalStackLayout>
+                                    <VerticalStackLayout Grid.Column="2">
+                                        <Label Text="Localidad:" />
+                                        <Entry Text="{Binding Localidad}" />
+                                        <Label Text="{Binding ErrorLocalidad}" Style="{StaticResource ErrorLabelStyle}" IsVisible="{Binding ErrorLocalidad, Converter={StaticResource StringNotEmptyConverter}}" />
+                                    </VerticalStackLayout>
+                                </Grid>
+
+                                <!-- Municipio + Estado -->
+                                <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                                    <VerticalStackLayout Grid.Column="0">
+                                        <Label Text="Municipio:" />
+                                        <Entry Text="{Binding Municipio}" />
+                                        <Label Text="{Binding ErrorMunicipio}" Style="{StaticResource ErrorLabelStyle}" IsVisible="{Binding ErrorMunicipio, Converter={StaticResource StringNotEmptyConverter}}" />
+                                    </VerticalStackLayout>
+                                    <VerticalStackLayout Grid.Column="1">
+                                        <Label Text="Entidad Federativa:" />
+                                        <Entry Text="{Binding EntidadFederativa}" />
+                                        <Label Text="{Binding ErrorEntidadFederativa}" Style="{StaticResource ErrorLabelStyle}" IsVisible="{Binding ErrorEntidadFederativa, Converter={StaticResource StringNotEmptyConverter}}" />
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </VerticalStackLayout>
+                        </Border>
+                    </VerticalStackLayout>
+                </ScrollView>
+            </syncfusion:SfTabItem>
+        
+            <!-- Otras pestañas por secciones -->
+            <syncfusion:SfTabItem Header="💼 Laborales">
+                    <ScrollView>
+                        <VerticalStackLayout Padding="20" Spacing="25">
+
+                            <!-- Asignación organizacional -->
+                            <Border Stroke="LightGray" Padding="15" BackgroundColor="White">
+                                <VerticalStackLayout Spacing="15">
+                                    <Label Text="Asignación Organizacional" FontAttributes="Bold" />
+                                    <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                                        <VerticalStackLayout Grid.Column="0">
+                                            <Label Text="División" />
+                                            <Picker ItemsSource="{Binding Divisiones}" 
+                                        SelectedItem="{Binding DivisionSeleccionada, Mode=TwoWay}"
+                                        ItemDisplayBinding="{Binding Nombre}" />
+                                        </VerticalStackLayout>
+                                        <VerticalStackLayout Grid.Column="1">
+                                            <Label Text="Centro de Costos" />
+                                            <Picker ItemsSource="{Binding CentrosCosto}"
+                                        SelectedItem="{Binding CentroSeleccionado, Mode=TwoWay}"
+                                        ItemDisplayBinding="{Binding Nombre}" />
+                                        </VerticalStackLayout>
+                                    </Grid>
+                                    <VerticalStackLayout>
+                                        <Label Text="Plaza disponible" />
+                                        <Picker ItemsSource="{Binding PlazasDisponibles}"
+                                            SelectedItem="{Binding PlazaSeleccionada, Mode=TwoWay}"
+                                            ItemDisplayBinding="{Binding NombrePuesto}" />
+                                    </VerticalStackLayout>
+                                </VerticalStackLayout>
+                            </Border>
+
+                            <!-- Contratación -->
+                            <!-- Condiciones Laborales -->
+                            <Border Stroke="LightGray" Padding="15" BackgroundColor="White">
+                                <VerticalStackLayout Spacing="15">
+                                    <Label Text="Condiciones Laborales" FontAttributes="Bold" />
+
+                                    <!-- TipoContrato y EstatusEmpleado -->
+                                    <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                                        <VerticalStackLayout Grid.Column="0">
+                                            <Label Text="Tipo de Contrato" />
+                                            <Picker ItemsSource="{Binding TipoContratoOpciones}"
+                        SelectedItem="{Binding TipoContrato}"
+                        ItemDisplayBinding="{Binding ., Converter={StaticResource EnumDisplayConverter}}" />
+                                        </VerticalStackLayout>
+                                        <VerticalStackLayout Grid.Column="1">
+                                            <Label Text="Estatus del Empleado" />
+                                            <Picker ItemsSource="{Binding EstatusEmpleadoOpciones}"
+                        SelectedItem="{Binding EstatusEmpleado}"
+                        ItemDisplayBinding="{Binding ., Converter={StaticResource EnumDisplayConverter}}" />
+                                        </VerticalStackLayout>
+                                    </Grid>
+
+                                    <!-- JornadaLaboral y TurnoAsignado -->
+                                    <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                                        <VerticalStackLayout Grid.Column="0">
+                                            <Label Text="Jornada Laboral" />
+                                            <Picker ItemsSource="{Binding JornadaLaboralOpciones}"
+        SelectedItem="{Binding JornadaLaboral, Mode=TwoWay}"
+        ItemDisplayBinding="{Binding ., Converter={StaticResource EnumDisplayConverter}}" />
+                                        </VerticalStackLayout>
+                                        <VerticalStackLayout Grid.Column="1">
+                                            <Label Text="Turno Asignado" />
+                                            <Picker ItemsSource="{Binding TurnoAsignadoOpciones}"
+                SelectedItem="{Binding TurnoAsignado, Mode=TwoWay}"
+                ItemDisplayBinding="{Binding ., Converter={StaticResource EnumDisplayConverter}}" />
+                                        </VerticalStackLayout>
+                                    </Grid>
+
+
+                                    <!-- PeriodicidadPago en 2 columnas, EsRotativo y FechaIngreso en Grid de 4 columnas -->
+                                    <Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="10">
+                                        <!-- PeriodicidadPago ocupa columnas 0 y 1 -->
+                                        <VerticalStackLayout Grid.Column="0" Grid.ColumnSpan="2">
+                                            <Label Text="Periodicidad de Pago" />
+                                            <Picker ItemsSource="{Binding PeriodicidadPagoOpciones}"
+                        SelectedItem="{Binding PeriodicidadPago}"
+                        ItemDisplayBinding="{Binding ., Converter={StaticResource EnumDisplayConverter}}" />
+                                        </VerticalStackLayout>
+
+                                        <!-- EsRotativo en columna 2 -->
+                                        <VerticalStackLayout Grid.Column="2">
+                                            <Label Text="¿Es Rotativo?" />
+                                            <Switch IsToggled="{Binding EsRotativo}" />
+                                        </VerticalStackLayout>
+
+                                        <!-- FechaIngreso en columna 3 -->
+                                        <VerticalStackLayout Grid.Column="3">
+                                            <Label Text="Fecha de Ingreso" />
+                                            <DatePicker Date="{Binding FechaIngreso}" HorizontalOptions="FillAndExpand" />
+                                        </VerticalStackLayout>
+                                    </Grid>
+                                </VerticalStackLayout>
+                            </Border>
+
+
+                            <!-- Comentarios -->
+                            <Border Stroke="LightGray" Padding="15" BackgroundColor="White">
+                                <VerticalStackLayout Spacing="10">
+                                    <Label Text="Comentarios Adicionales" FontAttributes="Bold" />
+                                    <Editor Text="{Binding Comentarios}" AutoSize="TextChanges" />
+                                </VerticalStackLayout>
+                            </Border>
+
+                        </VerticalStackLayout>
+                    </ScrollView>
+                </syncfusion:SfTabItem>
+
+            <syncfusion:SfTabItem Header="☎️ Contactos">
+                <ScrollView>
+                    <Label Text="Contactos del empleado (próximamente)" />
+                </ScrollView>
+            </syncfusion:SfTabItem>
+
+            <syncfusion:SfTabItem Header="📄 Documentos">
+                <ScrollView>
+                    <Label Text="Documentos requeridos (próximamente)" />
+                </ScrollView>
+            </syncfusion:SfTabItem>
+
+            <syncfusion:SfTabItem Header="🕘 Historial">
+                <ScrollView>
+                    <Label Text="Historial de movimientos (próximamente)" />
+                </ScrollView>
+            </syncfusion:SfTabItem>
+
+            <syncfusion:SfTabItem Header="💰 Fiscales">
+                <ScrollView>
+                    <Label Text="Datos fiscales (próximamente)" />
+                </ScrollView>
+            </syncfusion:SfTabItem>
+
+            <syncfusion:SfTabItem Header="💬 Comentarios">
+                <ScrollView>
+                    <Label Text="Comentarios u observaciones (próximamente)" />
+                </ScrollView>
+            </syncfusion:SfTabItem>
+
+                <syncfusion:SfTabItem Header="🛡️ Auditoría">
+                    <ScrollView>
+                        <Label Text="Registro de auditoría y cambios (próximamente)" />
+                    </ScrollView>
+                </syncfusion:SfTabItem>
+        </syncfusion:SfTabView>
+            
+            <!-- Botones de acción fijos -->
+            <HorizontalStackLayout Grid.Row="1"
+                               Padding="15"
+                               Spacing="10"
+                               HorizontalOptions="End"
+                               BackgroundColor="White">
+                <Button
+                            Text="Guardar"
+                            Clicked="OnGuardarClicked"
+                            BackgroundColor="Green"
+                            TextColor="White"
+                            WidthRequest="120" />
+                <Button Text="Cancelar"
+                            BackgroundColor="LightGray"
+                            TextColor="Black"
+                            WidthRequest="120"
+                            Clicked="OnCancelarClicked" />
+            </HorizontalStackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
